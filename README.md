@@ -3,7 +3,7 @@
 **Candidate Name:** Pradeep Modak
 **College Email ID:** 2023ugcm026@nitjsr.ac.in
 **College / Campus:** NIT Jamshedpur
-**Demo Video Link:** https://www.youtube.com/watch?v=2Ro1uKGrlLw
+**Demo Video Link:** https://youtu.be/x6yfCl2wN3Y
 **Slide Deck Link (if hosted externally):** N/A (Included in docs/)
 
 ## 1. Project Overview / Problem Statement & Approach

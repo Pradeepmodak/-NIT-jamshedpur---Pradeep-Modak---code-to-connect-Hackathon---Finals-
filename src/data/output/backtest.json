@@ -1,0 +1,23 @@
+{
+  "dynamic": {
+    "name": "Dynamic Sentiment Index",
+    "total_return_pct": 6.4975,
+    "annualized_volatility_pct": 14.5883,
+    "sharpe_ratio": 1.8557,
+    "max_drawdown_pct": -9.1148,
+    "trading_days": 61
+  },
+  "equal_weight": {
+    "name": "Equal-Weight Index",
+    "total_return_pct": 6.4975,
+    "annualized_volatility_pct": 14.5883,
+    "sharpe_ratio": 1.8557,
+    "max_drawdown_pct": -9.1148,
+    "trading_days": 61
+  },
+  "avg_turnover_pct": 0.0,
+  "total_rebalances": 0,
+  "replay_start": "2024-06-01",
+  "replay_end": "2024-08-30",
+  "num_signals": 0
+}
