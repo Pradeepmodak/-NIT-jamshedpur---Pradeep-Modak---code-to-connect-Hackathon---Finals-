@@ -1,0 +1,302 @@
+[
+  {
+    "id": "news_033",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Procter & Gamble shares after a recent merger/acquisition.",
+    "timestamp": "2024-06-07T04:01:49Z"
+  },
+  {
+    "id": "news_025",
+    "source": "newsapi",
+    "text": "ExxonMobil (XOM) faces headwinds due to unexpected macroeconomic delays.",
+    "timestamp": "2024-06-07T10:13:50Z"
+  },
+  {
+    "id": "news_049",
+    "source": "newsapi",
+    "text": "New trade tariffs introduced, impacting global supply chains.",
+    "timestamp": "2024-06-07T17:16:36Z"
+  },
+  {
+    "id": "news_015",
+    "source": "newsapi",
+    "text": "Strong quarterly results expected for Meta following recent geopolitical.",
+    "timestamp": "2024-06-07T18:04:30Z"
+  },
+  {
+    "id": "news_013",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Meta shares after a recent product launch.",
+    "timestamp": "2024-06-08T15:37:03Z"
+  },
+  {
+    "id": "news_016",
+    "source": "newsapi",
+    "text": "Strong quarterly results expected for Nvidia following recent macroeconomic.",
+    "timestamp": "2024-06-08T17:55:43Z"
+  },
+  {
+    "id": "news_010",
+    "source": "newsapi",
+    "text": "Google (GOOGL) faces headwinds due to unexpected geopolitical delays.",
+    "timestamp": "2024-06-10T22:10:01Z"
+  },
+  {
+    "id": "news_038",
+    "source": "newsapi",
+    "text": "Analysts upgrade WMT citing strong demand and successful merger/acquisition.",
+    "timestamp": "2024-06-16T08:32:03Z"
+  },
+  {
+    "id": "news_006",
+    "source": "newsapi",
+    "text": "Microsoft (MSFT) faces headwinds due to unexpected other delays.",
+    "timestamp": "2024-06-20T07:19:31Z"
+  },
+  {
+    "id": "news_005",
+    "source": "newsapi",
+    "text": "Analysts upgrade MSFT citing strong demand and successful macroeconomic.",
+    "timestamp": "2024-06-22T05:27:48Z"
+  },
+  {
+    "id": "news_030",
+    "source": "newsapi",
+    "text": "Johnson & Johnson (JNJ) faces headwinds due to unexpected macroeconomic delays.",
+    "timestamp": "2024-06-22T07:03:15Z"
+  },
+  {
+    "id": "news_045",
+    "source": "newsapi",
+    "text": "Tesla (TSLA) shares surge on positive product launch news.",
+    "timestamp": "2024-06-24T09:16:17Z"
+  },
+  {
+    "id": "news_028",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Johnson & Johnson shares after a recent other.",
+    "timestamp": "2024-06-24T22:41:01Z"
+  },
+  {
+    "id": "news_019",
+    "source": "newsapi",
+    "text": "Analysts upgrade JPM citing strong demand and successful other.",
+    "timestamp": "2024-06-26T22:06:12Z"
+  },
+  {
+    "id": "news_002",
+    "source": "newsapi",
+    "text": "Apple (AAPL) shares surge on positive macroeconomic news.",
+    "timestamp": "2024-06-27T16:51:53Z"
+  },
+  {
+    "id": "news_009",
+    "source": "newsapi",
+    "text": "Strong quarterly results expected for Amazon following recent macroeconomic.",
+    "timestamp": "2024-06-27T23:29:13Z"
+  },
+  {
+    "id": "news_017",
+    "source": "newsapi",
+    "text": "Nvidia (NVDA) faces headwinds due to unexpected merger/acquisition delays.",
+    "timestamp": "2024-06-27T23:43:31Z"
+  },
+  {
+    "id": "news_041",
+    "source": "newsapi",
+    "text": "Disney (DIS) shares surge on positive other news.",
+    "timestamp": "2024-06-29T23:25:36Z"
+  },
+  {
+    "id": "news_043",
+    "source": "newsapi",
+    "text": "Tesla (TSLA) shares surge on positive merger/acquisition news.",
+    "timestamp": "2024-07-02T11:20:18Z"
+  },
+  {
+    "id": "news_023",
+    "source": "newsapi",
+    "text": "Bank of America (BAC) shares surge on positive geopolitical news.",
+    "timestamp": "2024-07-02T11:38:00Z"
+  },
+  {
+    "id": "news_037",
+    "source": "newsapi",
+    "text": "Market reacts negatively to WMT amid broader geopolitical concerns.",
+    "timestamp": "2024-07-04T00:39:58Z"
+  },
+  {
+    "id": "news_011",
+    "source": "newsapi",
+    "text": "Google (GOOGL) faces headwinds due to unexpected credit event delays.",
+    "timestamp": "2024-07-05T20:28:57Z"
+  },
+  {
+    "id": "news_044",
+    "source": "newsapi",
+    "text": "Tesla (TSLA) shares surge on positive credit event news.",
+    "timestamp": "2024-07-06T05:48:23Z"
+  },
+  {
+    "id": "news_018",
+    "source": "newsapi",
+    "text": "Analysts upgrade NVDA citing strong demand and successful credit event.",
+    "timestamp": "2024-07-06T22:35:03Z"
+  },
+  {
+    "id": "news_042",
+    "source": "newsapi",
+    "text": "Analysts upgrade DIS citing strong demand and successful macroeconomic.",
+    "timestamp": "2024-07-07T07:16:56Z"
+  },
+  {
+    "id": "news_004",
+    "source": "newsapi",
+    "text": "Microsoft (MSFT) shares surge on positive geopolitical news.",
+    "timestamp": "2024-07-11T23:08:56Z"
+  },
+  {
+    "id": "news_007",
+    "source": "newsapi",
+    "text": "Amazon (AMZN) faces headwinds due to unexpected product launch delays.",
+    "timestamp": "2024-07-14T14:43:58Z"
+  },
+  {
+    "id": "news_027",
+    "source": "newsapi",
+    "text": "ExxonMobil (XOM) faces headwinds due to unexpected macroeconomic delays.",
+    "timestamp": "2024-07-15T13:12:08Z"
+  },
+  {
+    "id": "news_021",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures JPMorgan shares after a recent merger/acquisition.",
+    "timestamp": "2024-07-15T21:08:39Z"
+  },
+  {
+    "id": "news_034",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Coca-Cola shares after a recent product launch.",
+    "timestamp": "2024-07-16T10:38:07Z"
+  },
+  {
+    "id": "news_047",
+    "source": "newsapi",
+    "text": "Global markets tumble amid rising geopolitical tensions in Europe.",
+    "timestamp": "2024-07-18T04:26:23Z"
+  },
+  {
+    "id": "news_029",
+    "source": "newsapi",
+    "text": "Market reacts negatively to JNJ amid broader merger/acquisition concerns.",
+    "timestamp": "2024-07-27T18:11:02Z"
+  },
+  {
+    "id": "news_014",
+    "source": "newsapi",
+    "text": "Analysts upgrade META citing strong demand and successful credit event.",
+    "timestamp": "2024-07-31T01:15:19Z"
+  },
+  {
+    "id": "news_032",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Procter & Gamble shares after a recent macroeconomic.",
+    "timestamp": "2024-07-31T22:03:18Z"
+  },
+  {
+    "id": "news_020",
+    "source": "newsapi",
+    "text": "JPMorgan (JPM) shares surge on positive macroeconomic news.",
+    "timestamp": "2024-08-01T15:36:23Z"
+  },
+  {
+    "id": "news_001",
+    "source": "newsapi",
+    "text": "Analysts upgrade AAPL citing strong demand and successful geopolitical.",
+    "timestamp": "2024-08-02T01:58:20Z"
+  },
+  {
+    "id": "news_026",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures ExxonMobil shares after a recent merger/acquisition.",
+    "timestamp": "2024-08-03T15:16:58Z"
+  },
+  {
+    "id": "news_022",
+    "source": "newsapi",
+    "text": "Analysts upgrade BAC citing strong demand and successful product launch.",
+    "timestamp": "2024-08-06T19:32:00Z"
+  },
+  {
+    "id": "news_012",
+    "source": "newsapi",
+    "text": "Strong quarterly results expected for Google following recent merger/acquisition.",
+    "timestamp": "2024-08-10T20:23:53Z"
+  },
+  {
+    "id": "news_046",
+    "source": "newsapi",
+    "text": "Federal Reserve issues unexpected statement on interest rates.",
+    "timestamp": "2024-08-11T01:28:05Z"
+  },
+  {
+    "id": "news_003",
+    "source": "newsapi",
+    "text": "Analysts upgrade AAPL citing strong demand and successful geopolitical.",
+    "timestamp": "2024-08-11T12:06:08Z"
+  },
+  {
+    "id": "news_031",
+    "source": "newsapi",
+    "text": "Procter & Gamble (PG) shares surge on positive geopolitical news.",
+    "timestamp": "2024-08-13T09:06:00Z"
+  },
+  {
+    "id": "news_008",
+    "source": "newsapi",
+    "text": "Market reacts negatively to AMZN amid broader macroeconomic concerns.",
+    "timestamp": "2024-08-13T16:08:57Z"
+  },
+  {
+    "id": "news_050",
+    "source": "newsapi",
+    "text": "Major credit event sends shockwaves through the financial sector.",
+    "timestamp": "2024-08-13T20:19:53Z"
+  },
+  {
+    "id": "news_040",
+    "source": "newsapi",
+    "text": "Analysts upgrade DIS citing strong demand and successful macroeconomic.",
+    "timestamp": "2024-08-13T23:30:02Z"
+  },
+  {
+    "id": "news_024",
+    "source": "newsapi",
+    "text": "Market reacts negatively to BAC amid broader credit event concerns.",
+    "timestamp": "2024-08-18T03:53:33Z"
+  },
+  {
+    "id": "news_048",
+    "source": "newsapi",
+    "text": "Inflation data shows signs of cooling, boosting investor sentiment.",
+    "timestamp": "2024-08-19T05:28:19Z"
+  },
+  {
+    "id": "news_035",
+    "source": "newsapi",
+    "text": "Analysts upgrade KO citing strong demand and successful geopolitical.",
+    "timestamp": "2024-08-23T13:45:43Z"
+  },
+  {
+    "id": "news_039",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Walmart shares after a recent other.",
+    "timestamp": "2024-08-25T00:53:06Z"
+  },
+  {
+    "id": "news_036",
+    "source": "newsapi",
+    "text": "Regulatory scrutiny pressures Coca-Cola shares after a recent product launch.",
+    "timestamp": "2024-08-25T21:42:23Z"
+  }
+]
