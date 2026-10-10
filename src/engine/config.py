@@ -16,7 +16,7 @@ SEED: int = 42
 # ---------------------------------------------------------------------------
 # Paths (relative to project root)
 # ---------------------------------------------------------------------------
-PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
+PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent.parent
 DATA_DIR: Path = PROJECT_ROOT / "data"
 RAW_DIR: Path = DATA_DIR / "raw"
 SAMPLES_DIR: Path = DATA_DIR / "samples"
