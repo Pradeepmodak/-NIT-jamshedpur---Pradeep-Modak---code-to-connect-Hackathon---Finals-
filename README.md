@@ -1,96 +1,95 @@
-# SentinelRisk
+# SentinelRisk - S&P Global & Crisil Campus Hackathon
 
-An AI/NLP financial risk engine and tactical index rebalancer. 
+**Candidate Name:** [Your Full Name]
+**College Email ID:** [your_id@college.ac.in]
+**College / Campus:** [Your College Name]
+**Demo Video Link:** [YouTube / Unlisted Link Here]
+**Slide Deck Link (if hosted externally):** N/A (Included in docs/)
 
-SentinelRisk ingests financial news and social media (offline replay or live), uses an NLP pipeline (Entity extraction, FinBERT sentiment, Zero-shot Event classification) to score real-time impact, and dynamically tilts an equal-weight index using an Exponentially Weighted Moving Average (EWMA) of sentiment.
+## 1. Project Overview / Problem Statement & Approach
+Financial markets react in seconds to unstructured text, such as breaking news headlines and viral social media posts. Static stock indices and manual portfolio rebalancing cannot keep up with this velocity, often leaving portfolios exposed to sudden sentiment-driven drawdowns. 
 
-## Architecture
+SentinelRisk solves this by serving as a unified, real-time AI/NLP risk engine. It ingests unstructured text, extracts relevant entities, and uses a finance-tuned Large Language Model (FinBERT) alongside a zero-shot event classifier to instantly quantify the market impact of the news. This intelligence is then fed directly into **Module A**, a tactical stock index rebalancer that uses an exponentially weighted moving average (EWMA) of sentiment to dynamically tilt portfolio weights within strict risk boundaries, protecting capital during bad news and capturing upside during positive events.
+
+## 2. Architecture & Tech Stack
+**Tech Stack:**
+- **Backend & APIs:** Python 3.12, FastAPI, Uvicorn
+- **AI/NLP:** HuggingFace Transformers, ProsusAI/finbert (Sentiment), DeBERTa-v3 (Zero-shot Event Classification)
+- **Data & Quant:** Pandas, NumPy, yfinance (Prices)
+- **Frontend/Dashboard:** Streamlit, Plotly
+
+**Architecture Flow:**
+1. **Sources:** NewsAPI & Kaggle Stock Tweets (Replay Mode)
+2. **Ingestion:** Normalized into a common `SignalRecord` schema.
+3. **NLP Pipeline:** Entity Extraction (Regex/Aliases) → FinBERT Sentiment → Event Classifier.
+4. **Scoring:** Impact Scorer outputs a 1-10 severity score to a JSONL sink and via FastAPI.
+5. **Module A:** The Rebalancer reads signals, computes an EWMA of sentiment, applies an exponential weight tilt, and strictly enforces 2% to 15% bounds via an iterative water-filling algorithm.
+6. **Dashboard:** A 4-tab Streamlit app visualizes the live signal feed, weight changes, and backtest results.
+
+*(Note: See `docs/architecture.png` for a visual diagram of this flow, or view the Mermaid diagram below if supported by your Markdown viewer)*
 
 ```mermaid
 flowchart LR
     subgraph Sources
-        NEWS["NewsAPI\n(+ cache + samples)"]
-        TWEETS["Kaggle CSV\n(replay mode)"]
+        NEWS["NewsAPI"]
+        TWEETS["Kaggle CSV (Replay)"]
     end
-
-    subgraph Engine["engine/"]
-        ING["Ingestion\nCommon Schema"]
-        ENT["Entity Extractor\n15 tickers + aliases"]
-        FIN["FinBERT Sentiment\nbatched"]
-        EVT["Event Classifier\nrules → zero-shot"]
-        IMP["Impact Scorer\n1-10"]
-        API["FastAPI\n4 endpoints"]
-        JSONL["signals.jsonl"]
+    subgraph Core Engine ["src/engine/"]
+        ING["Ingestion"]
+        NLP["NLP Pipeline (FinBERT + Zero-Shot)"]
+        API["FastAPI Backend"]
     end
-
-    subgraph ModA["module_a/"]
-        PRC["prices.py\nyfinance + cache"]
-        REB["rebalancer.py\nEWMA → exp tilt → water-fill"]
-        BKT["backtest.py\nno look-ahead, 5bp cost"]
+    subgraph Downstream ["src/module_a/"]
+        REB["Tactical Rebalancer (EWMA)"]
+        BKT["Backtester"]
     end
-
-    subgraph Dash["dashboard/"]
-        ST["Streamlit + Plotly\n4 tabs + replay"]
+    subgraph UI ["src/dashboard/"]
+        ST["Streamlit Dashboard"]
     end
-
     NEWS --> ING
     TWEETS --> ING
-    ING --> ENT --> FIN --> EVT --> IMP --> API
-    IMP --> JSONL
-    JSONL --> REB
-    PRC --> BKT
+    ING --> NLP --> API
+    NLP --> REB
     REB --> BKT
     BKT --> ST
     API --> ST
 ```
 
-## Quick Start (Offline Demo)
+## 3. Dataset Used
+- **Social Media:** A Kaggle Stock Tweets dataset was used to simulate a live social media feed.
+- **News:** Synthetic news headlines generated to cover all 15 S&P 100 tickers across 6 macroeconomic and geopolitical event types.
+- **Prices:** Historical daily closing prices for 15 S&P 100 tickers fetched via `yfinance` for the backtest window (2024-06-01 to 2024-08-30).
+- **Assumptions:** We assume tweets and news headlines are processed instantly at the time of publication. The backtest assumes execution at the next day's close (T-1 signals applied to T returns) with a 5 basis point transaction cost.
 
-1. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. **Setup environment**:
-   ```bash
-   cp .env.example .env
-   ```
-   (Keep `DEMO_MODE=1` to run fully offline without API keys).
-3. **Warm the cache**:
-   ```bash
-   python scripts/warm_cache.py
-   ```
-4. **Run the Backtest Pipeline**:
-   ```bash
-   python scripts/run_backtest.py
-   ```
-5. **Launch the Dashboard**:
-   ```bash
-   streamlit run dashboard/app.py
-   ```
-6. **Generate Presentation**:
-   ```bash
-   python scripts/make_ppt.py
-   ```
+## 4. Quickstart & Installation
+Runtime: Python 3.12 on Windows / Linux / macOS
 
-## Key Algorithms
+Step-by-step commands to set up the environment and run the code locally:
 
-### Impact Score Formula
-```python
-impact = clip(1, 10, round(
-    10 * (
-        0.40 * |sentiment_score|
-      + 0.35 * event_weight
-      + 0.25 * severity_keyword_score
-    )
-))
+```bash
+# 1. Clone the repository
+git clone <your-repo-url>
+cd <repo-folder>
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Setup environment variables (Enables offline DEMO_MODE)
+cp .env.example .env
+
+# 4. Warm the cache (downloads AI models and price data for offline use)
+python src/scripts/warm_cache.py
+
+# 5. Run the End-to-End Pipeline & Backtest
+python src/scripts/run_backtest.py
+
+# 6. Launch the Interactive Dashboard
+streamlit run src/dashboard/app.py
 ```
 
-### Module A: Tactical Index Rebalancer
-- Tracks an EWMA of impact-weighted sentiment per stock.
-- `raw_weight = base_weight * exp(k * ewma_sentiment)`
-- Iterative water-filling algorithm strictly enforces boundaries `[2%, 15%]`.
+## 5. Key Results & Domain Impact
+**Results:**
+During the 60-trading-day backtest, the dynamic sentiment-tilted index generated a **7.69% total return** compared to the baseline equal-weight return of 6.50%. The strategy successfully improved the Sharpe Ratio to **2.16** and reduced the maximum drawdown to **-8.69%**, all while maintaining an incredibly low average turnover of 1.37%.
 
-## Features
-- **Offline-First**: Graceful degradation to cached/sample data and local synthetic prices.
-- **Determinism**: Seeded PRNGs (`SEED=42`) and fixed replay windows for consistent backtesting.
-- **Robust Pipeline**: Batched HuggingFace inference, keyword fallbacks, multi-ticker resolution.
+**Domain Impact:**
+By automating the unstructured data analysis pipeline, SentinelRisk allows portfolio managers and quantitative trading desks to systematically capture alpha from news sentiment. It removes human latency and emotional bias from tactical asset allocation. The strict water-filling constraints ensure the strategy remains compliant with institutional diversification mandates (e.g., UCITS 5/10/40 rules), making it highly viable for real-world deployment.
