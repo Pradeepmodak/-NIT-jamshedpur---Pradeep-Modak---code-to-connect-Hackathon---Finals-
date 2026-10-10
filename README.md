@@ -1,9 +1,9 @@
 # SentinelRisk - S&P Global & Crisil Campus Hackathon
 
-**Candidate Name:** [Your Full Name]
-**College Email ID:** [your_id@college.ac.in]
-**College / Campus:** [Your College Name]
-**Demo Video Link:** [YouTube / Unlisted Link Here]
+**Candidate Name:** Pradeep Modak
+**College Email ID:** 2023ugcm026@nitjsr.ac.in
+**College / Campus:** NIT Jamshedpur
+**Demo Video Link:** https://www.youtube.com/watch?v=2Ro1uKGrlLw
 **Slide Deck Link (if hosted externally):** N/A (Included in docs/)
 
 ## 1. Project Overview / Problem Statement & Approach
